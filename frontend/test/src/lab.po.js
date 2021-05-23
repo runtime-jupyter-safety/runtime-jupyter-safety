@@ -31,7 +31,7 @@ var LabPageObject = function () {
       return browser.$$('span.jp-DirListing-itemIcon').length > 0;
     });
     browser.$('span.jp-BreadCrumbs-home').click();
-    browser.pause(500);
+    browser.pause(1500);
     var dirs = (shortName != null)? shortName.split('/') : url.split('/');
     console.log(dirs);
     var i = 0;
@@ -44,7 +44,7 @@ var LabPageObject = function () {
       console.log(dirName);
       browser.$('span.jp-DirListing-itemText=' + dirName).scrollIntoView();
       browser.$('span.jp-DirListing-itemText=' + dirName).doubleClick();
-      browser.pause(500);
+      browser.pause(1500);
       i+=1;
     }
     this.increaseWindowWidth(200);
